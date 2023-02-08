@@ -2,4 +2,4 @@
 A web scraper for extracting data from Wikipedia using Python. Demonstrates skills in web scraping, data processing, and Python programming
 
 ## Getting Started
-Text
+These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
