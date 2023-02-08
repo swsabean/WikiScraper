@@ -22,8 +22,11 @@ def scrape_wikipedia(url):
         return f'Failed to scrape {url}. Error code: {response.status_code}'
 
 if __name__ == '__main__':
+    # Prompt the user for a Wikipedia page title
+    page_title = input('Enter the title of a Wikipedia page: ')
+
     # Example URL for a Wikipedia article
-    url = 'https://en.wikipedia.org/wiki/Web_scraping'
+    url = f'https://en.wikipedia.org/wiki/{page_title}'
 
     # Scrape the text from the Wikipedia article
     text = scrape_wikipedia(url)
