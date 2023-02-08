@@ -24,3 +24,8 @@ git clone https://github.com/swsabean/WikiScraper.git
 ```shell
 pip install -r requirements.txt
 ```
+
+3. Run the scraper:
+```shell
+python scraper.py
+```
