@@ -18,3 +18,7 @@ These instructions will help you get a copy of the project up and running on you
 1. Clone the repository:
 ```shell
 git clone https://github.com/swsabean/WikiScraper.git
+
+2. Install the required packages:
+```shell
+pip install -r requirements.txt
