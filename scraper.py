@@ -25,7 +25,7 @@ if __name__ == '__main__':
     # Prompt the user for a Wikipedia page title
     page_title = input('Enter the title of a Wikipedia page: ')
 
-    # Example URL for a Wikipedia article
+   # Build the URL for the Wikipedia article
     url = f'https://en.wikipedia.org/wiki/{page_title}'
 
     # Scrape the text from the Wikipedia article
