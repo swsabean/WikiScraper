@@ -12,3 +12,9 @@ These instructions will help you get a copy of the project up and running on you
 - Required Python packages:
     - requests
     - BeautifulSoup4
+
+### Installing
+
+1. Clone the repository:
+```shell
+git clone https://github.com/<your_username>/WikiScraper.git
