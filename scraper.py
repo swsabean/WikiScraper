@@ -11,20 +11,14 @@ def scrape_wikipedia(url):
         # Parse the HTML content of the response
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        # Find the main content of the Wikipedia article
-        main_content = soup.find(id='mw-content-text')
+        # Find the author of the article
+        author = soup.find("a", {"class": "fn"})
+        if author:
+            author = author.get_text()
+        else:
+            author = "Author not found"
 
-        # Extract the text from the main content
-        text = main_content.get_text()
-
-        # Find the first section header and its content
-        first_header = main_content.find('h2')
-        first_section = first_header.find_next_sibling('p')
-
-        # Extract the text from the first section
-        first_section_text = first_section.get_text()
-
-        return text, first_header.get_text(), first_section_text
+        return author
     else:
         # Return an error message if the request was not successful
         return f'Failed to scrape {url}. Error code: {response.status_code}'
@@ -37,9 +31,7 @@ if __name__ == '__main__':
     url = f'https://en.wikipedia.org/wiki/{page_title}'
 
     # Scrape the text from the Wikipedia article
-    text, first_header, first_section = scrape_wikipedia(url)
+    author = scrape_wikipedia(url)
 
     # Print the extracted text, first section header, and first section content
-    print(f'Text: {text}')
-    print(f'First header: {first_header}')
-    print(f'First section: {first_section}')
+    print(f'Author:{author}')
